@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 90%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.heading {
+    text-align: center;
+    border: none;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background: #fdffbc;
+    color: #6a492b;
+}
+
+.heading svg {
+    width: 100%;
+    height: 300px;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+.form-container {
+    background: #f2f2f2;
+    padding: 10px 15px 10px 15px;
+    border: none;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+p, textarea {
+    color: #6a492b;
+}
+
+input[type="submit"] {
+    border: none;
+    background: #6a4b2b;
+    border-radius: 5px;
+    color: #fdffbc;
+    cursor: pointer;
+    padding: 12px 20px;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="submit"]:hover {
+    background: #58391c;
+}
+
+@media all and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .heading {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+
+    .heading h1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .heading p {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .heading svg {
+        width: 100%;
+        height: 200px;
+    }
+
+    .heading svg {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}
+
+@media all and (max-width: 430px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .heading {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+    }
+
+    .heading h1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .heading p {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .heading svg {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+
+}
